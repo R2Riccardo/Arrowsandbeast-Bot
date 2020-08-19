@@ -31,12 +31,7 @@ country = config['settings']['country']
 state = config['settings']['state']
 phone = config['settings']['phone']
 
-print(colored('    _________                    _____       __      __  _                 ', 'magenta', attrs=['bold']))
-print(colored('   / ____/ (_)  ____  _______   / ___/____  / /_  __/ /_(_)___  ____  _____', 'magenta', attrs=['bold']))
-print(colored('  / __/ / / / |/_/ / / / ___/   \__ \/ __ \/ / / / / __/ / __ \/ __ \/ ___/', 'magenta', attrs=['bold']))
-print(colored(' / /___/ / />  </ /_/ / /      ___/ / /_/ / / /_/ / /_/ / /_/ / / / (__  ) ', 'magenta', attrs=['bold']))
-print(colored('/_____/_/_/_/|_|\__, /_/      /____/\____/_/\__,_/\__/_/\____/_/ /_/____/  ', 'magenta', attrs=['bold']))
-print(colored('               /____/                                                         Developer Version', 'magenta', attrs=['bold']))
+print(colored('Arrows and Beast ACO - Developer Version', 'magenta', attrs=['bold']))
 print('')
 
 
@@ -114,17 +109,16 @@ def create_arrowsBOT():
     hook = Webhook(url=webhook)
 
     embed = Embed(
-        color=0xFF00FF,
         timestamp=True
     )
 
     embed.set_author(name='Arrows and Beast ACO')
     embed.add_field(name='Product', value=link, inline=False)
-    embed.add_field(name='Size', value=f'US 8', inline=False)
+    embed.add_field(name='Size', value=f'yoursize', inline=False)
     embed.add_field(name='Payment Method', value=f'Bank Transfer', inline=False)
-    embed.add_field(name='Profile', value="||Riccardo||", inline=False)
-    embed.set_footer(text="Elixyr Solutions", icon_url='https://cdn.discordapp.com/attachments/703310112193773578/703316503784849478/ElixyrLogo.png')
-    embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/738498975514230824/740579274456694884/download.png")
+    embed.add_field(name='Profile', value="||yourprofile||", inline=False)
+    embed.set_footer(text="Useless ACO made with selenium", icon_url='icon')
+    embed.set_thumbnail(url="icon")
 
     hook.send(embeds=embed)
     sleep(20)
