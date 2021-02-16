@@ -1,4 +1,4 @@
-# ------------------------------------------------------------------------------- #
+# ------------------------------------------------------------------------------- # IMPORT LIBRARIES
 
 import logging
 import json
@@ -14,7 +14,7 @@ from colorama import Fore, init
 from dhooks import Webhook, Embed
 from termcolor import colored
 
-# ------------------------------------------------------------------------------- #
+# ------------------------------------------------------------------------------- # READ CONFIG FILE, CREATE ONE
 
 with open('config.json') as f:
     config = json.load(f)
@@ -41,12 +41,12 @@ link=input("Link: ")
 
 def create_arrowsBOT():
 
-    # ------------------------------------------------------------------------------- #
+    # ------------------------------------------------------------------------------- # SET HEADERS
 
     options=webdriver.ChromeOptions()
     options.add_argument('user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36"')
     
-    # ------------------------------------------------------------------------------- #
+    # ------------------------------------------------------------------------------- # PRETTY SELF EXPLANATORY
 
     driver = webdriver.Chrome(executable_path='./chromedriver.exe', service_log_path='./debug.log', options=options)
     driver.get("" + link + "")
